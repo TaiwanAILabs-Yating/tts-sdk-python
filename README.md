@@ -44,9 +44,10 @@ pip install Yating-TTS-SDK --upgrade
 
 ### Input Type
 
-| Name | Description                        |
-| ---- | ---------------------------------- |
-| text | Recognize input.text as pure text. |
+| Name | Description                          |
+| ---- | ------------------------------------ |
+| text | Recognize input.text as pure text.   |
+| ssml | Recognize input.text in ssml format. |
 
 ### Voice Model
 
