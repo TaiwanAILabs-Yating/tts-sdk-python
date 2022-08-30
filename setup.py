@@ -9,7 +9,7 @@ with open(join(this_dir, "README.md"), encoding="utf-8") as file:
 
 setup(
     name="Yating TTS SDK",
-    version="0.1.1",
+    version="0.1.2",
     author="pinkeyu7",
     author_email="pinke.yu7@gmail.com",
     description="Yating TTS SDK",
