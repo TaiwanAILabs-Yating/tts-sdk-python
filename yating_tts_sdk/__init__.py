@@ -13,6 +13,7 @@ class YatingClient:
     YatingClient provide TTS synthesize service via api call.
     """
 
+    TYPE_SSML = "ssml"
     TYPE_TEXT = "text"
 
     MODEL_FEMALE_1 = "zh_en_female_1"
@@ -78,13 +79,13 @@ class YatingClient:
         """
         Validate parameter for below:
         text        (str): should not be empty
-        text_type   (str): text
+        text_type   (str): ssml, text
         model       (str): zh_en_female_1, zh_en_female_2, zh_en_male_1
         encoding    (str): MP3, LINEAR16
         sample_rate (str): 16K
         """
 
-        type_list = [self.TYPE_TEXT]
+        type_list = [self.TYPE_SSML, self.TYPE_TEXT]
         model_list = [self.MODEL_FEMALE_1,
                       self.MODEL_FEMALE_2, self.MODEL_MALE_1]
         encoding_list = [self.ENCODING_MP3, self.ENCODING_LINEAR16]
