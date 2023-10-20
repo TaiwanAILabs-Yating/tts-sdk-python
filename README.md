@@ -1,5 +1,23 @@
 # Yating TTS SDK - Python version
 
+## Install
+
+Initial Install
+
+```bash
+pip install Yating-TTS-SDK
+```
+
+Upgrade existed package
+
+```bash
+pip install Yating-TTS-SDK --upgrade
+```
+
+## PyPI Link
+
+[Yating-TTS-SDK](https://pypi.org/project/Yating-TTS-SDK/)
+
 ## Available Key
 
 - Please contact Yating TTS
