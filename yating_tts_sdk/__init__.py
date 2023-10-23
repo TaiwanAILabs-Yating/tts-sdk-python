@@ -95,7 +95,7 @@ class YatingClient:
         pitch       (float): default 1, from 0.5 to 1.5
         energy      (float): default 1, from 0.5 to 1.5
         encoding    (str): MP3, LINEAR16
-        sample_rate (str): 16K (22K not support yet)
+        sample_rate (str): 16K, 22K
         """
 
         type_list = [self.TYPE_SSML, self.TYPE_TEXT]
@@ -103,7 +103,21 @@ class YatingClient:
                       self.MODEL_ZHEN_FEMALE_2, self.MODEL_ZHEN_MALE_1,self.MODEL_TAI_FEMALE_1,
                       self.MODEL_TAI_FEMALE_2, self.MODEL_TAI_MALE_1]
         encoding_list = [self.ENCODING_MP3, self.ENCODING_LINEAR16]
-        sample_rate_list = [self.SAMPLE_RATE_16K]
+        sample_rate_list = []
+
+        match model:
+            case self.MODEL_ZHEN_FEMALE_1:
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
+            case self.MODEL_ZHEN_FEMALE_2:
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
+            case self.MODEL_ZHEN_MALE_1:
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
+            case self.MODEL_TAI_FEMALE_1:
+                sample_rate_list = [self.SAMPLE_RATE_16K]
+            case self.MODEL_TAI_FEMALE_2:
+                sample_rate_list = [self.SAMPLE_RATE_16K]
+            case self.MODEL_TAI_MALE_1:
+                sample_rate_list = [self.SAMPLE_RATE_16K]
 
         if text == "":
             raise Exception("text is empty")

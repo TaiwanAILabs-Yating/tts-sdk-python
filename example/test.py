@@ -18,7 +18,8 @@ ENCODING = ttsClient.ENCODING_MP3
 SAMPLE_RATE = ttsClient.SAMPLE_RATE_16K
 FILE_NAME = "example"
 
-
-client = ttsClient(URL, KEY)
-client.synthesize(TEXT, TEXT_TYPE, MODEL, SPEED, PITCH, ENERGY,
-                  ENCODING, SAMPLE_RATE, FILE_NAME)
+try:
+    client = ttsClient(URL, KEY)
+    client.synthesize(TEXT, TEXT_TYPE, MODEL, SPEED, PITCH, ENERGY, ENCODING, SAMPLE_RATE, FILE_NAME)
+except Exception as err :
+    print("An exception occurred:", err)
