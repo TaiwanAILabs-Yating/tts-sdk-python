@@ -19,6 +19,7 @@ class YatingClient:
     MODEL_ZHEN_FEMALE_1 = "zh_en_female_1"
     MODEL_ZHEN_FEMALE_2 = "zh_en_female_2"
     MODEL_ZHEN_MALE_1 = "zh_en_male_1"
+    MODEL_ZHEN_MALE_2 = "zh_en_male_2"
     MODEL_TAI_FEMALE_1 = "tai_female_1"
     MODEL_TAI_FEMALE_2 = "tai_female_2"
     MODEL_TAI_MALE_1 = "tai_male_1"
@@ -90,7 +91,7 @@ class YatingClient:
         Validate parameter for below:
         text        (str): should not be empty
         text_type   (str): ssml, text
-        model       (str): zh_en_female_1, zh_en_female_2, zh_en_male_1, tai_female_1, tai_female_2, tai_male_1
+        model       (str): zh_en_female_1, zh_en_female_2, zh_en_male_1, zh_en_male_2, tai_female_1, tai_female_2, tai_male_1
         speed       (float): default 1, from 0.5 to 1.5
         pitch       (float): default 1, from 0.5 to 1.5
         energy      (float): default 1, from 0.5 to 1.5
@@ -99,9 +100,15 @@ class YatingClient:
         """
 
         type_list = [self.TYPE_SSML, self.TYPE_TEXT]
-        model_list = [self.MODEL_ZHEN_FEMALE_1,
-                      self.MODEL_ZHEN_FEMALE_2, self.MODEL_ZHEN_MALE_1,self.MODEL_TAI_FEMALE_1,
-                      self.MODEL_TAI_FEMALE_2, self.MODEL_TAI_MALE_1]
+        model_list = [
+            self.MODEL_ZHEN_FEMALE_1,
+            self.MODEL_ZHEN_FEMALE_2,
+            self.MODEL_ZHEN_MALE_1,
+            self.MODEL_ZHEN_MALE_2,
+            self.MODEL_TAI_FEMALE_1,
+            self.MODEL_TAI_FEMALE_2,
+            self.MODEL_TAI_MALE_1
+            ]
         encoding_list = [self.ENCODING_MP3, self.ENCODING_LINEAR16]
         sample_rate_list = []
 
@@ -112,6 +119,8 @@ class YatingClient:
                 sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
             case self.MODEL_ZHEN_MALE_1:
                 sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
+            case self.MODEL_ZHEN_MALE_2:
+                sample_rate_list = [self.SAMPLE_RATE_22K]
             case self.MODEL_TAI_FEMALE_1:
                 sample_rate_list = [self.SAMPLE_RATE_16K]
             case self.MODEL_TAI_FEMALE_2:
