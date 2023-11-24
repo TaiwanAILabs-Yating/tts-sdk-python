@@ -63,14 +63,15 @@ pip install Yating-TTS-SDK --upgrade
 
 ### Voice Model
 
-| Name           | Sample Rate | Description                       |
-| -------------- | ----------- | --------------------------------- |
-| zh_en_female_1 | 16k,22k     | Yating speak Mandarin and English |
-| zh_en_female_2 | 16k,22k     | Yiqing speak Mandarin and English |
-| zh_en_male_1   | 16k,22k     | Jiahao speak Mandarin and English |
-| tai_female_1   | 16k         | Yating speak Taiwanese            |
-| tai_female_2   | 16k         | Yiqing speak Taiwanese            |
-| tai_male_1     | 16k         | Jiahao speak Taiwanese            |
+| Name           | Sample Rate | Description                        |
+| -------------- | ----------- | ---------------------------------- |
+| zh_en_female_1 | 16k,22k     | Yating speak Mandarin and English  |
+| zh_en_female_2 | 16k,22k     | Yiqing speak Mandarin and English  |
+| zh_en_male_1   | 16k,22k     | Jiahao speak Mandarin and English  |
+| zh_en_male_2   | 22k         | Zhiming speak Mandarin and English |
+| tai_female_1   | 16k         | Yating speak Taiwanese             |
+| tai_female_2   | 16k         | Yiqing speak Taiwanese             |
+| tai_male_1     | 16k         | Jiahao speak Taiwanese             |
 
 ### Encoding Format
 
