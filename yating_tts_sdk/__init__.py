@@ -122,11 +122,11 @@ class YatingClient:
             case self.MODEL_ZHEN_MALE_2:
                 sample_rate_list = [self.SAMPLE_RATE_22K]
             case self.MODEL_TAI_FEMALE_1:
-                sample_rate_list = [self.SAMPLE_RATE_16K]
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
             case self.MODEL_TAI_FEMALE_2:
-                sample_rate_list = [self.SAMPLE_RATE_16K]
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
             case self.MODEL_TAI_MALE_1:
-                sample_rate_list = [self.SAMPLE_RATE_16K]
+                sample_rate_list = [self.SAMPLE_RATE_16K, self.SAMPLE_RATE_22K]
 
         if text == "":
             raise Exception("text is empty")
